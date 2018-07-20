@@ -1,4 +1,4 @@
-# DU_Crawl
+# DU Crawl
 A simple crawler for a college website.
 
 ### Dependencies
