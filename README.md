@@ -22,7 +22,7 @@ Here is a sample output for the first four roll numbers.
 ```
 If you're unsure about the path, simply open any of the .html files in your browser and copy and paste the url in a way that the roll numbers and .html are not in the link, as they are automatically added by + 'str(x)' and + '.html'.
 
-3. You can now run [parse_results_script.py](https://github.com/genericSpecimen/DU_Crawl/blob/master/ParseHTMLResult/parse_results_script.py) and data.csv file will be generated. 
+3. You can now run ```python parse_results_script.py``` and data.csv file will be generated. 
 
 ### License
 Do whatever you want to do with this.
