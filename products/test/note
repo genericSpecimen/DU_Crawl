@@ -1,0 +1,168 @@
+1. Perform login.
+2. Go to product listings page, https://society6.com/s?q=new+wall-art.
+    Fetch all the product urls using links.py and store it in an array called links.
+    for each link, perform an action.
+
+
+# filename = 'login.html'
+# with open(filename, 'wb') as f:
+#    f.write(response.body)
+
+
+-----------------------EXTRACTING THE PRODUCT LINKS---------------------------
+https://society6.com/s?q=new+wall-art
+
+>>> baseurl = 'https://society6.com'
+>>> divs = response.xpath("//a[@class='link_product_3ebk3']")
+>>> links = []
+>>> baseurl = 'https://society6.com'
+>>> for i in divs.xpath(".//@href"):
+...     links.append(baseurl + i.extract())
+... 
+>>> for i in links:
+...     print(i)
+... 
+------------------------------------------------------------------------------
+
+
+the promote button
+document.getElementsByClassName('iconPromote_styles_33bhB')[0]
+
+
+function main(splash, args)
+  assert(splash:go(args.url))
+  assert(splash:wait(5.0))
+  assert(splash:runjs("document.querySelector('.button_styles_38MW-').click();"))
+  assert(splash:wait(5.0))
+  return {
+    html = splash:html(),
+    png = splash:png(),
+  }
+end
+
+
+document.querySelector('.button_styles_38MW-').click()
+document.querySelector('.inputComment_styles_35vWd').value = "Such a clean design, beautiful!"
+document.getElementById('postComment').click()
+
+
+assert(splash:runjs("document.querySelector('.button_styles_38MW-').click();"))
+assert(splash.runjs(document.querySelector('.inputComment_styles_35vWd').value = "Such a clean design, beautiful!"))
+assert(splash.runjs(document.getElementById('postComment').click()))
+
+
+assert(splash.runjs("document.querySelector('.inputComment_styles_35vWd').value = 'Such a clean design, beautiful!'")
+
+
+document.querySelector('.inputComment_styles_35vWd').value = 'Such a clean design, beautiful!'
+
+assert(splash.runjs("document.querySelector('.inputComment_styles_35vWd').value = 'Such a clean design, beautiful!'"))
+
+assert(splash.runjs("document.getElementById('postComment').click()"))
+
+
+function main(splash, args)
+  assert(splash:go(args.url))
+  assert(splash:wait(5.0))
+    assert(splash:runjs("document.querySelector('.button_styles_38MW-').click();"))
+	assert(splash:wait(0.5))
+  assert(splash.runjs("document.querySelector('.inputComment_styles_35vWd').value = 'Such a clean design, beautiful!'"))
+	assert(splash:wait(0.5))
+  assert(splash.runjs("document.getElementById('postComment').click()"))
+  assert(splash:wait(0.5))
+  return {
+    html = splash:html(),
+    png = splash:png(),
+  }
+end
+
+comment = "Such a clean design, beautiful!"
+assert(splash.runjs([[document.querySelector('.inputComment_styles_35vWd').value='Such a clean design, beautiful!']]))
+
+
+function main(splash, args)
+  assert(splash:go(args.url))
+  assert(splash:wait(5.0))
+  assert(splash:runjs("document.querySelector('.button_styles_38MW-').click();"))
+	assert(splash:wait(0.5))
+  assert(splash.runjs([[document.querySelector('.inputComment_styles_35vWd').value="Such a clean design, beautiful!"]]))
+	assert(splash:wait(0.5))
+  assert(splash.runjs("document.getElementById('postComment').click()"))
+  assert(splash:wait(0.5))
+  return {
+    html = splash:html(),
+    png = splash:png(),
+  }
+end
+
+
+local insert_text = splash:jsfunc([[
+    function () {
+        var input_box = document.querySelector('.inputComment_styles_35vWd')
+        input_box.value = "Such a clean design, beautiful!"
+    }
+]])
+
+
+assert(splash.runjs([[document.getElementById('postComment').click()]]))
+
+
+
+function main(splash, args)
+  assert(splash:go(args.url))
+  assert(splash:wait(5.0))
+  
+  local insert_text = splash:jsfunc([[
+    function () {
+        document.querySelector('.button_styles_38MW-').click();
+
+        var input_box = document.querySelector('.inputComment_styles_35vWd');
+        input_box.value = "Such a clean design, beautiful!"
+
+        document.getElementById('postComment').click();
+    }
+  ]])
+  insert_text()
+  assert(splash:wait(0.5))
+
+  return {
+    html = splash:html(),
+    png = splash:png(),
+  }
+end
+
+
+assert(splash:runjs("foo = function (){}"))
+local res = splash:evaljs("foo()")  -- this returns 'bar'
+
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+var comment = function() {
+  document.querySelector('.button_styles_38MW-').click();
+  sleep(5000);
+  document.querySelector('.inputComment_styles_35vWd').value = "Such a clean design, beautiful!";
+  sleep(5000);
+  document.getElementById('postComment').click();
+}
+
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function promote() {
+  document.querySelector('.button_styles_38MW-').click();
+}
+
+function insert_text() {
+  document.querySelector('.inputComment_styles_35vWd').value = "Such a clean design, beautiful!";
+}
+
+function post_comment() {
+  document.getElementById('postComment').click();
+}
