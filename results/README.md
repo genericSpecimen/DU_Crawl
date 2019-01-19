@@ -15,9 +15,9 @@ If you're unsure about the path, simply open any of the .html files in your brow
 
 3. You can now run ```python parse_results_script.py``` and data.csv file will be generated. 
 
-### Understanding the code
+### Understanding the code structure
 
-1. The [jan_2019/download_html](https://github.com/genericSpecimen/crawl-scripts/tree/master/results/jan_2019/download_html) folder contains the script to fetch the results. The script [get_results_script.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/download_html/get_results_script.py) executes the script [get_html.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/download_html/get_html.py) for the range of roll numbers specified in [get_results_script.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/download_html/get_results_script.py).
+1. The [jan_2019/download_html](https://github.com/genericSpecimen/crawl-scripts/tree/master/results/jan_2019/download_html) folder contains the script to fetch the results. The script [get_results_script.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/download_html/get_results_script.py) executes the script [get_html.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/download_html/get_html.py) for the range of roll numbers specified in [line 6 of get_results_script.py](https://github.com/genericSpecimen/crawl-scripts/blob/c7318378cd4098ab9c22992f829d4556a0c5cf85/results/jan_2019/download_html/get_results_script.py#L6).
 
 2. The [jan_2019/parse_html](https://github.com/genericSpecimen/crawl-scripts/tree/master/results/jan_2019/parse_html) folder contains the code for scraping the desired data in our previously downloaded .html files. The script [parse_results_scripts.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/parse_html/parse_results_script.py) executes the script [parse_results.py](https://github.com/genericSpecimen/crawl-scripts/blob/master/results/jan_2019/parse_html/parse_html/spiders/parse_results.py) in the [jan_2019/parse_html/parse_html/spiders](https://github.com/genericSpecimen/crawl-scripts/tree/master/results/jan_2019/parse_html/parse_html/spiders) folder and writes the required data into a data.csv file.
 
