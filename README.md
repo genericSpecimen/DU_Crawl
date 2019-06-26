@@ -1,1 +1,4 @@
-# Some simple crawling/scraping scripts to document my learnings.
+# scrapy-scripts 
+
+Some simple crawling/scraping scripts made using scrapy.
+
