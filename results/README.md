@@ -7,7 +7,7 @@ A simple crawler to download the results of my classmates from a university webs
 
 ### Usage
 1. To fetch the .html files, run ```python get_results_script.py``` in the [download_html](./download_html) folder.
-2. Before running the scraper [parse_results_script.py](./parse_html/get_results_script.py), we need to modify a line in [parse_results.py](./parse_html/parse_html/spiders/parse_results.py). We will specify the location of these .html files in the [6th line](./parse_html/parse_html/spiders/parse_results.py#L6).
+2. Before running the scraper [parse_results_script.py](./parse_html/parse_results_script.py), we need to modify a line in [parse_results.py](./parse_html/parse_html/spiders/parse_results.py). We will specify the location of these .html files in the [6th line](./parse_html/parse_html/spiders/parse_results.py#L6).
 ```
 	start_urls = ['file:///home/user/path/to/results/result_' + str(x) + '.html' for x in range(17058570001, 17058570053)]'
 ```
